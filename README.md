@@ -62,6 +62,31 @@ elk/
 ```bash
 docker-compose up -d --build
 ```
+## 2️⃣ Verify Containers
+
+Run the following command to check that all services are running:
+
+```bash
+docker ps
+```
+**Expected output:**
+elasticsearch   Up (healthy)
+logstash        Up
+kibana          Up
+filebeat        Up
+
+
+## 3️⃣ Open Kibana
+
+Open your browser and navigate to: http://localhost:5601
+
+In Kibana:
+
+Navigate to Stack Management → Index Patterns
+
+Create an index pattern: logs-*
+
+Go to Discover to explore live logs
 
 ## 🧠 Extending the SIEM
 
