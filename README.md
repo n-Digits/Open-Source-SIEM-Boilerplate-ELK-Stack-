@@ -60,8 +60,31 @@ elk/
 1. **Navigate to your project directory**:
 
 ```bash
-cd path/to/elk
+docker-compose up -d --build
 ```
+
+## 🧠 Extending the SIEM
+
+You can enhance this SIEM setup by:
+
+- Adding [**Metricbeat**](https://www.elastic.co/guide/en/beats/metricbeat/current/metricbeat-overview.html) for system and container metrics
+- Adding [**Winlogbeat**](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-overview.html) for Windows Event Logs
+- Installing [**ElastAlert2**](https://elastalert2.readthedocs.io/en/latest/) for rule-based alerting
+- Importing prebuilt [**Kibana dashboards**](https://www.elastic.co/guide/en/kibana/current/saved-objects.html) for visualization
+- Forwarding [**Syslog, firewall, or cloud logs**](https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-overview.html) via Filebeat
+
+## ⚠️ Security Notice
+
+This stack disables SSL and authentication for simplicity.  
+It is intended for **local testing or lab environments only**.
+
+For production:
+
+- Enable security (`xpack.security.enabled=true`)
+- Configure SSL certificates
+- Use secure credentials for Elasticsearch and Kibana
+- Mount persistent volumes with backups
+
 
 ## 👨‍💻 Maintainer
 
