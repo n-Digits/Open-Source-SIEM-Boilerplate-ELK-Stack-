@@ -116,3 +116,9 @@ For production:
 **n-Digits — AI & Digital Innovation Consulting**  
 Perth, Australia  
 🌐 [https://n-digits.com](https://n-digits.com)
+
+
+## 📜 License
+
+- **Elastic Stack components:** [Elastic License 2.0](https://www.elastic.co/licensing/elastic-license)  
+- **Project configuration and Docker setup:** [MIT License](https://opensource.org/licenses/MIT)
