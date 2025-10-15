@@ -18,19 +18,20 @@ This setup allows you to ingest, process, and visualize security logs locally or
 
 ---
 
-## 🏗️ Architecture Overview
-[Filebeat] → [Logstash] → [Elasticsearch] → [Kibana]
+## 🏗️ Stack Overview
 
-| Component        | Port  | Description |
-|------------------|-------|-------------|
-| **Elasticsearch** | 9200 | Stores and indexes logs |
-| **Logstash**      | 5000 / 5044 / 9600 | Receives, filters, and forwards logs |
-| **Kibana**        | 5601 | Web interface for dashboards and searches |
-| **Filebeat**      | — | Collects logs from containers or host |
+The stack consists of four main services:
 
+| Service         | Description |
+|-----------------|-------------|
+| **Elasticsearch** | Stores indexed logs and event data |
+| **Logstash**      | Receives, parses, and forwards logs to Elasticsearch |
+| **Kibana**        | Visualizes logs, dashboards, and charts |
+| **Filebeat**      | Collects host and container logs and sends them to Logstash |
 ---
 
 ## 📁 Folder Structure
+```
 elk/
 │
 ├── docker-compose.yml
@@ -38,22 +39,32 @@ elk/
 ├── README.md
 │
 ├── elasticsearch/
-│ └── Dockerfile
+│   └── Dockerfile
 │
 ├── logstash/
-│ ├── Dockerfile
-│ ├── logstash.conf
-│ └── config/
-│ └── logstash.yml
+│   ├── Dockerfile
+│   ├── logstash.conf
+│   └── config/
+│       └── logstash.yml
 │
 ├── kibana/
-│ └── Dockerfile
+│   └── Dockerfile
 │
 └── filebeat/
-├── Dockerfile
-└── filebeat.yml
+    ├── Dockerfile
+    └── filebeat.yml
+```
 
-## ▶️ Running the Stack
+## ▶️ Starting the Stack with Docker
 
-docker-compose up -d --build
+1. **Navigate to your project directory**:
 
+```bash
+cd path/to/elk
+```
+
+## 👨‍💻 Maintainer
+
+**n-Digits — AI & Digital Innovation Consulting**  
+Perth, Australia  
+🌐 [https://n-digits.com](https://n-digits.com)
