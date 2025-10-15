@@ -31,9 +31,9 @@ services:
     depends_on:
       - elasticsearch
     ports:
-      - "5044:5044" # Beats input
-      - "5000:5000" # TCP input
-      - "9600:9600" # API / monitoring
+      - "5044:5044"
+      - "5000:5000"
+      - "9600:9600"
     networks:
       - elk
 
@@ -43,10 +43,23 @@ services:
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
       - SERVER_HOST=0.0.0.0
-    ports:
-      - "5601:5601"
     depends_on:
       - elasticsearch
+    ports:
+      - "5601:5601"
+    networks:
+      - elk
+
+  filebeat:
+    build: ./filebeat
+    container_name: filebeat
+    user: root
+    volumes:
+      - /var/log:/var/log
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+    depends_on:
+      - logstash
     networks:
       - elk
 
