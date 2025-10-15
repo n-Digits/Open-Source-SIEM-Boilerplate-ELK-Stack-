@@ -1,0 +1,138 @@
+# === OS / Editor / IDE ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# === Node / NPM (if using Beats or custom scripts) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Python virtualenvs (optional utilities) ===
+venv/
+__pycache__/
+*.pyc
+
+# === Docker ===
+# Local volumes and temp files
+*.pid
+*.seed
+*.bak
+*.log
+*.tmp
+*.out
+logs/
+data/
+tmp/
+volumes/
+
+# Docker Compose generated files
+docker-compose.override.yml
+.env
+.env.local
+.env.*.local
+
+# === Elasticsearch ===
+elasticsearch/data/
+elasticsearch/logs/
+elasticsearch/config/certs/
+elasticsearch/config/elasticsearch.keystore
+elasticsearch/config/elasticsearch.yml.bak
+
+# === Logstash ===
+logstash/logs/
+logstash/data/
+logstash/config/*.bak
+logstash/config/*.secret
+logstash/pipeline/*.bak
+logstash/pipeline/*.secret
+
+# === Kibana ===
+kibana/optimize/
+kibana/plugins/
+kibana/config/kibana.yml.bak
+
+# === Misc ===
+# Backup or export files
+*.tar
+*.zip
+*.gz
+*.bak
+*.old
+*.save
+
+# === Git / Local Tools ===
+.gitignore~
+*.orig
+# === OS / Editor / IDE ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# === Node / NPM (if using Beats or custom scripts) ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === Python virtualenvs (optional utilities) ===
+venv/
+__pycache__/
+*.pyc
+
+# === Docker ===
+# Local volumes and temp files
+*.pid
+*.seed
+*.bak
+*.log
+*.tmp
+*.out
+logs/
+data/
+tmp/
+volumes/
+
+# Docker Compose generated files
+docker-compose.override.yml
+.env
+.env.local
+.env.*.local
+
+# === Elasticsearch ===
+elasticsearch/data/
+elasticsearch/logs/
+elasticsearch/config/certs/
+elasticsearch/config/elasticsearch.keystore
+elasticsearch/config/elasticsearch.yml.bak
+
+# === Logstash ===
+logstash/logs/
+logstash/data/
+logstash/config/*.bak
+logstash/config/*.secret
+logstash/pipeline/*.bak
+logstash/pipeline/*.secret
+
+# === Kibana ===
+kibana/optimize/
+kibana/plugins/
+kibana/config/kibana.yml.bak
+
+# === Misc ===
+# Backup or export files
+*.tar
+*.zip
+*.gz
+*.bak
+*.old
+*.save
+
+# === Git / Local Tools ===
+.gitignore~
+*.orig

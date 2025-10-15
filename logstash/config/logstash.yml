@@ -1,0 +1,4 @@
+# Modern Logstash 8.x config (minimal, no x-pack)
+api.http.host: "0.0.0.0"
+pipeline.ecs_compatibility: disabled
+path.config: /usr/share/logstash/pipeline
